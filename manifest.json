@@ -1,0 +1,23 @@
+{
+  "Name": "The Living Valley Expanded Compatibility",
+  "Author": "mariachaaan",
+  "Version": "1.0.0",
+  "Description": "Compatibility patch for The Living Valley with Stardew Valley Expanded NPC support.",
+  "UniqueID": "ai2claw.TheLivingValleyExpanded",
+  "EntryDll": "TheLivingValleyExpanded.dll",
+  "MinimumApiVersion": "4.0.0",
+  "Dependencies": [
+    {
+      "UniqueID": "mx146323.StardewLivingRPG",
+      "IsRequired": true
+    },
+    {
+      "UniqueID": "FlashShifter.StardewValleyExpandedCP",
+      "IsRequired": false
+    },
+    {
+      "UniqueID": "FlashShifter.StardewValleyExpandedALL",
+      "IsRequired": false
+    }
+  ]
+}
