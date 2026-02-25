@@ -14,7 +14,7 @@ It extends The Living Valley's internal NPC targeting so SVE villagers are recog
 ## Install
 
 1. Install/update **The Living Valley**:
-   - https://github.com/ai2-claw/stardew-living-rpg-mod
+   - https://www.nexusmods.com/stardewvalley/mods/42597
 2. Install/update **Stardew Valley Expanded**:
    - https://www.nexusmods.com/stardewvalley/mods/3753
    - https://github.com/FlashShifter/StardewValleyExpanded
