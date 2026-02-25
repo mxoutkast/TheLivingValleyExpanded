@@ -13,6 +13,8 @@ public sealed class ModEntry : Mod
 {
     private const string TargetModId = "mx146323.StardewLivingRPG";
     private const string HarmonyId = "ai2claw.TheLivingValleyExpanded";
+    private const string BaseLoreRelativePath = @"assets\sve-lore.json";
+    private const string OverrideLoreRelativePath = @"assets\sve-lore.override.json";
 
     private static readonly Regex CanonNpcBlockRegex = new(
         @"CANON_NPCS:\s*\[(?<list>[^\]]*)\]",
@@ -109,7 +111,7 @@ public sealed class ModEntry : Mod
         var lorePath = Path.Combine(Helper.DirectoryPath, "assets", "sve-lore.json");
         if (!File.Exists(lorePath))
         {
-            Monitor.Log("SVE lore file not found at assets\\sve-lore.json. Lore injection disabled.", LogLevel.Trace);
+            Monitor.Log($"SVE lore file not found at {BaseLoreRelativePath}. Lore injection disabled.", LogLevel.Trace);
             return;
         }
 
@@ -210,10 +212,21 @@ public sealed class ModEntry : Mod
             applied.Add(candidate);
         }
 
+        var overridePath = Path.Combine(Helper.DirectoryPath, "assets", "sve-lore.override.json");
+        if (File.Exists(overridePath))
+        {
+            var overrideLore = TryReadLoreFile(overridePath, "local override");
+            if (overrideLore is not null)
+            {
+                MergeLoreOverlay(overrideLore);
+                applied.Add(OverrideLoreRelativePath);
+            }
+        }
+
         if (applied.Count > 0)
         {
             Monitor.Log(
-                $"Applied SVE lore localization overlays for '{locale}': {string.Join(", ", applied)}",
+                $"Applied SVE lore overlays for '{locale}': {string.Join(", ", applied)}",
                 LogLevel.Info);
         }
     }

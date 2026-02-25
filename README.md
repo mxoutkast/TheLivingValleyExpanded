@@ -13,27 +13,14 @@ It extends The Living Valley's internal NPC targeting so SVE villagers are recog
 
 ## Install
 
-1. Install/update **The Living Valley**:
+1. Download and install **The Living Valley** from NexusMods:
    - https://www.nexusmods.com/stardewvalley/mods/42597
-2. Install/update **Stardew Valley Expanded**:
+2. Download and install **Stardew Valley Expanded** from NexusMods:
    - https://www.nexusmods.com/stardewvalley/mods/3753
-   - https://github.com/FlashShifter/StardewValleyExpanded
-3. Build this project and copy its output folder into your `Mods` directory.
-
-## Build
-
-Set `SMAPI_PATH` to your Stardew Valley install directory, then run:
-
-```powershell
-dotnet build
-```
-
-Example (PowerShell):
-
-```powershell
-$env:SMAPI_PATH = "C:\Program Files (x86)\Steam\steamapps\common\Stardew Valley"
-dotnet build
-```
+3. Download and install **The Living Valley Expanded Compatibility Patch** from NexusMods:
+   - https://www.nexusmods.com/stardewvalley/mods/42699
+4. Ensure each mod folder is inside your Stardew Valley `Mods` directory.
+5. Launch the game with SMAPI.
 
 ## Config
 
@@ -50,7 +37,14 @@ dotnet build
 
 Lore data source:
 - `assets/sve-lore.json`
-- edit this file to tune personality, speech style, relationship ties, and location context.
+- `assets/sve-lore.override.json` (optional, loaded after locale overlays)
+- edit `assets/sve-lore.override.json` to tune personality, speech style, relationship ties, and location context without changing base lore files.
+- sample template: `assets/sve-lore.override.example.json`
+
+Override quick start:
+1. Copy `assets/sve-lore.override.example.json` to `assets/sve-lore.override.json`.
+2. Change only the NPC/location fields you want to override.
+3. Restart the game.
 
 Community localization:
 - Drop locale overlays into `i18n/sve-lore.<locale>.json` (for example `i18n/sve-lore.es.json`).

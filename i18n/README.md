@@ -17,6 +17,7 @@ Fallback behavior:
   1. `i18n/sve-lore.pt-br.json`
   2. `i18n/sve-lore.pt.json`
 - Then falls back to base `assets/sve-lore.json` for any missing fields.
+- If present, `assets/sve-lore.override.json` is applied last so local edits always win.
 
 Overlay format:
 - Same shape as `assets/sve-lore.json`.
