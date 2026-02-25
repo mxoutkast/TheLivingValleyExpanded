@@ -62,6 +62,10 @@ public sealed class ModEntry : Mod
     private Harmony? _harmony;
     private bool _patched;
     private bool _loreLoaded;
+    private string _activeLoreLocale = string.Empty;
+    private readonly JsonSerializerOptions _jsonOptions = new() { PropertyNameCaseInsensitive = true };
+    private readonly Dictionary<string, SveNpcLoreEntry> _baseNpcLoreByToken = new(StringComparer.OrdinalIgnoreCase);
+    private readonly Dictionary<string, string> _baseLocationLoreByToken = new(StringComparer.OrdinalIgnoreCase);
     private readonly Dictionary<string, SveNpcLoreEntry> _npcLoreByToken = new(StringComparer.OrdinalIgnoreCase);
     private readonly Dictionary<string, string> _locationLoreByToken = new(StringComparer.OrdinalIgnoreCase);
 
@@ -90,13 +94,17 @@ public sealed class ModEntry : Mod
     private void OnSaveLoaded(object? sender, SaveLoadedEventArgs e)
     {
         InjectRumorBoardNpcTargets("SaveLoaded");
+        RefreshLoreForCurrentLocale(force: true);
     }
 
     private void LoadLoreFile()
     {
+        _baseNpcLoreByToken.Clear();
+        _baseLocationLoreByToken.Clear();
         _npcLoreByToken.Clear();
         _locationLoreByToken.Clear();
         _loreLoaded = false;
+        _activeLoreLocale = string.Empty;
 
         var lorePath = Path.Combine(Helper.DirectoryPath, "assets", "sve-lore.json");
         if (!File.Exists(lorePath))
@@ -105,61 +113,219 @@ public sealed class ModEntry : Mod
             return;
         }
 
+        var parsed = TryReadLoreFile(lorePath, "base lore");
+        if (parsed is null)
+            return;
+
+        foreach (var (rawName, entry) in parsed.Npcs)
+        {
+            if (entry is null)
+                continue;
+
+            var token = ResolveLoreNpcToken(rawName);
+            if (string.IsNullOrWhiteSpace(token))
+                continue;
+
+            _baseNpcLoreByToken[token] = CloneLoreEntry(entry);
+        }
+
+        foreach (var (rawLocation, text) in parsed.Locations)
+        {
+            if (string.IsNullOrWhiteSpace(text))
+                continue;
+
+            var token = NormalizeLocationToken(rawLocation);
+            if (string.IsNullOrWhiteSpace(token))
+                continue;
+
+            _baseLocationLoreByToken[token] = text.Trim();
+        }
+
+        _loreLoaded = _baseNpcLoreByToken.Count > 0 || _baseLocationLoreByToken.Count > 0;
+        if (!_loreLoaded)
+        {
+            Monitor.Log("SVE base lore is empty. Lore injection disabled.", LogLevel.Warn);
+            return;
+        }
+
+        Monitor.Log(
+            $"Loaded base SVE lore: npc={_baseNpcLoreByToken.Count}, locations={_baseLocationLoreByToken.Count}.",
+            LogLevel.Info);
+
+        RefreshLoreForCurrentLocale(force: true);
+    }
+
+    private SveLoreFile? TryReadLoreFile(string filePath, string description)
+    {
         try
         {
-            var json = File.ReadAllText(lorePath);
-            var parsed = JsonSerializer.Deserialize<SveLoreFile>(
-                json,
-                new JsonSerializerOptions
-                {
-                    PropertyNameCaseInsensitive = true
-                });
-
+            var json = File.ReadAllText(filePath);
+            var parsed = JsonSerializer.Deserialize<SveLoreFile>(json, _jsonOptions);
             if (parsed is null)
             {
-                Monitor.Log("SVE lore file loaded as empty JSON. Lore injection disabled.", LogLevel.Warn);
-                return;
+                Monitor.Log($"SVE {description} file is empty or invalid JSON object: {filePath}", LogLevel.Warn);
+                return null;
             }
 
-            foreach (var (rawName, entry) in parsed.Npcs)
-            {
-                if (entry is null)
-                    continue;
-
-                var token = ResolveLoreNpcToken(rawName);
-                if (string.IsNullOrWhiteSpace(token))
-                    continue;
-
-                _npcLoreByToken[token] = entry;
-            }
-
-            foreach (var (rawLocation, text) in parsed.Locations)
-            {
-                if (string.IsNullOrWhiteSpace(text))
-                    continue;
-
-                var token = NormalizeLocationToken(rawLocation);
-                if (string.IsNullOrWhiteSpace(token))
-                    continue;
-
-                _locationLoreByToken[token] = text.Trim();
-            }
-
-            _loreLoaded = _npcLoreByToken.Count > 0 || _locationLoreByToken.Count > 0;
-            Monitor.Log(
-                $"Loaded SVE lore pack: npc={_npcLoreByToken.Count}, locations={_locationLoreByToken.Count}.",
-                _loreLoaded ? LogLevel.Info : LogLevel.Warn);
+            return parsed;
         }
         catch (Exception ex)
         {
-            Monitor.Log($"Failed to load SVE lore file: {ex.Message}", LogLevel.Warn);
+            Monitor.Log($"Failed to load SVE {description} file '{filePath}': {ex.Message}", LogLevel.Warn);
+            return null;
         }
+    }
+
+    private void RefreshLoreForCurrentLocale(bool force = false)
+    {
+        if (!_loreLoaded)
+            return;
+
+        var locale = ResolveActiveLoreLocale();
+        if (!force && string.Equals(locale, _activeLoreLocale, StringComparison.OrdinalIgnoreCase))
+            return;
+
+        _activeLoreLocale = locale;
+        _npcLoreByToken.Clear();
+        _locationLoreByToken.Clear();
+
+        foreach (var (token, entry) in _baseNpcLoreByToken)
+            _npcLoreByToken[token] = CloneLoreEntry(entry);
+
+        foreach (var (token, text) in _baseLocationLoreByToken)
+            _locationLoreByToken[token] = text;
+
+        var applied = new List<string>();
+        foreach (var candidate in BuildLocaleFallbackChain(locale))
+        {
+            var path = Path.Combine(Helper.DirectoryPath, "i18n", $"sve-lore.{candidate}.json");
+            if (!File.Exists(path))
+                continue;
+
+            var overlay = TryReadLoreFile(path, $"locale overlay ({candidate})");
+            if (overlay is null)
+                continue;
+
+            MergeLoreOverlay(overlay);
+            applied.Add(candidate);
+        }
+
+        if (applied.Count > 0)
+        {
+            Monitor.Log(
+                $"Applied SVE lore localization overlays for '{locale}': {string.Join(", ", applied)}",
+                LogLevel.Info);
+        }
+    }
+
+    private void MergeLoreOverlay(SveLoreFile overlay)
+    {
+        foreach (var (rawName, entry) in overlay.Npcs)
+        {
+            if (entry is null)
+                continue;
+
+            var token = ResolveLoreNpcToken(rawName);
+            if (string.IsNullOrWhiteSpace(token))
+                continue;
+
+            if (!_npcLoreByToken.TryGetValue(token, out var existing))
+            {
+                existing = new SveNpcLoreEntry();
+                _npcLoreByToken[token] = existing;
+            }
+
+            MergeLoreEntry(existing, entry);
+        }
+
+        foreach (var (rawLocation, text) in overlay.Locations)
+        {
+            if (string.IsNullOrWhiteSpace(text))
+                continue;
+
+            var token = NormalizeLocationToken(rawLocation);
+            if (string.IsNullOrWhiteSpace(token))
+                continue;
+
+            _locationLoreByToken[token] = text.Trim();
+        }
+    }
+
+    private string ResolveActiveLoreLocale()
+    {
+        var overrideLocale = (_config.LoreLocaleOverride ?? string.Empty).Trim();
+        if (!string.IsNullOrWhiteSpace(overrideLocale))
+            return NormalizeLocaleCode(overrideLocale);
+
+        try
+        {
+            var localeProp = Helper.Translation.GetType().GetProperty("Locale", BindingFlags.Public | BindingFlags.Instance);
+            var locale = localeProp?.GetValue(Helper.Translation)?.ToString();
+            return NormalizeLocaleCode(locale);
+        }
+        catch
+        {
+            return "en";
+        }
+    }
+
+    private static string NormalizeLocaleCode(string? locale)
+    {
+        if (string.IsNullOrWhiteSpace(locale))
+            return "en";
+
+        return locale.Trim().Replace('_', '-').ToLowerInvariant();
+    }
+
+    private static IEnumerable<string> BuildLocaleFallbackChain(string locale)
+    {
+        var normalized = NormalizeLocaleCode(locale);
+        var seen = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
+
+        if (seen.Add(normalized))
+            yield return normalized;
+
+        var dash = normalized.IndexOf('-', StringComparison.Ordinal);
+        if (dash > 0)
+        {
+            var language = normalized[..dash];
+            if (seen.Add(language))
+                yield return language;
+        }
+    }
+
+    private static SveNpcLoreEntry CloneLoreEntry(SveNpcLoreEntry source)
+    {
+        return new SveNpcLoreEntry
+        {
+            Role = source.Role ?? string.Empty,
+            Persona = source.Persona ?? string.Empty,
+            Speech = source.Speech ?? string.Empty,
+            Ties = source.Ties ?? string.Empty,
+            Boundaries = source.Boundaries ?? string.Empty
+        };
+    }
+
+    private static void MergeLoreEntry(SveNpcLoreEntry target, SveNpcLoreEntry overlay)
+    {
+        if (!string.IsNullOrWhiteSpace(overlay.Role))
+            target.Role = overlay.Role.Trim();
+        if (!string.IsNullOrWhiteSpace(overlay.Persona))
+            target.Persona = overlay.Persona.Trim();
+        if (!string.IsNullOrWhiteSpace(overlay.Speech))
+            target.Speech = overlay.Speech.Trim();
+        if (!string.IsNullOrWhiteSpace(overlay.Ties))
+            target.Ties = overlay.Ties.Trim();
+        if (!string.IsNullOrWhiteSpace(overlay.Boundaries))
+            target.Boundaries = overlay.Boundaries.Trim();
     }
 
     private string BuildSveLorePromptBlock(string? npcName)
     {
         if (!_config.EnableSveLoreInjection || !_loreLoaded || !IsSVEInstalled())
             return string.Empty;
+
+        RefreshLoreForCurrentLocale();
 
         var parts = new List<string>();
         var npcLore = TryGetNpcLore(npcName, out var resolvedNpcName);

@@ -41,6 +41,8 @@ dotnet build
 
 - `EnableSveLoreInjection`:
   when `true`, injects SVE lore snippets into Player2 `game_state_info`.
+- `LoreLocaleOverride`:
+  optional locale override (for example `es`, `pt-br`). Empty = use current game locale.
 - `IncludeFriendshipNpcsWhenSVEInstalled`:
   when `true`, friendship NPC names from the loaded save are auto-added.
 - `AdditionalNpcNamesCsv`:
@@ -49,3 +51,9 @@ dotnet build
 Lore data source:
 - `assets/sve-lore.json`
 - edit this file to tune personality, speech style, relationship ties, and location context.
+
+Community localization:
+- Drop locale overlays into `i18n/sve-lore.<locale>.json` (for example `i18n/sve-lore.es.json`).
+- Overlays are partial and merged over base lore.
+- Locale fallback is automatic (`pt-br` -> `pt` -> base).
+- Full contributor instructions: `i18n/README.md`.
