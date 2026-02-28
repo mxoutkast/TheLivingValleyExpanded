@@ -1,0 +1,296 @@
+{
+    "Npcs":  [
+                 {
+                     "Id":  "alesia",
+                     "DisplayName":  "Alesia",
+                     "Aliases":  [
+                                     "Alesia"
+                                 ],
+                     "HomeRegion":  "castle_village",
+                     "Tags":  [
+                                  "sve",
+                                  "expanded_npc",
+                                  "adventurer",
+                                  "castle_village"
+                              ]
+                 },
+                 {
+                     "Id":  "andy",
+                     "DisplayName":  "Andy",
+                     "Aliases":  [
+                                     "Andy"
+                                 ],
+                     "HomeRegion":  "fairhaven_farm",
+                     "Tags":  [
+                                  "sve",
+                                  "expanded_npc",
+                                  "farmer",
+                                  "fairhaven"
+                              ]
+                 },
+                 {
+                     "Id":  "apples",
+                     "DisplayName":  "Apples",
+                     "Aliases":  [
+                                     "Apples"
+                                 ],
+                     "HomeRegion":  "aurora_vineyard",
+                     "Tags":  [
+                                  "sve",
+                                  "expanded_npc",
+                                  "junimo",
+                                  "aurora_vineyard"
+                              ]
+                 },
+                 {
+                     "Id":  "camilla",
+                     "DisplayName":  "Camilla",
+                     "Aliases":  [
+                                     "Camilla"
+                                 ],
+                     "HomeRegion":  "castle_village",
+                     "Tags":  [
+                                  "sve",
+                                  "expanded_npc",
+                                  "adventurer",
+                                  "magic",
+                                  "castle_village"
+                              ]
+                 },
+                 {
+                     "Id":  "claire",
+                     "DisplayName":  "Claire",
+                     "Aliases":  [
+                                     "Claire"
+                                 ],
+                     "HomeRegion":  "pelican_town",
+                     "Tags":  [
+                                  "sve",
+                                  "expanded_npc",
+                                  "joja"
+                              ]
+                 },
+                 {
+                     "Id":  "hank",
+                     "DisplayName":  "Hank",
+                     "Aliases":  [
+                                     "Hank"
+                                 ],
+                     "HomeRegion":  "grampleton_suburbs",
+                     "Tags":  [
+                                  "sve",
+                                  "expanded_npc",
+                                  "grampleton",
+                                  "family"
+                              ]
+                 },
+                 {
+                     "Id":  "isaac",
+                     "DisplayName":  "Isaac",
+                     "Aliases":  [
+                                     "Isaac"
+                                 ],
+                     "HomeRegion":  "castle_village",
+                     "Tags":  [
+                                  "sve",
+                                  "expanded_npc",
+                                  "adventurer",
+                                  "castle_village"
+                              ]
+                 },
+                 {
+                     "Id":  "jadu",
+                     "DisplayName":  "Jadu",
+                     "Aliases":  [
+                                     "Jadu"
+                                 ],
+                     "HomeRegion":  "castle_village",
+                     "Tags":  [
+                                  "sve",
+                                  "expanded_npc",
+                                  "adventurer",
+                                  "magic",
+                                  "castle_village"
+                              ]
+                 },
+                 {
+                     "Id":  "jolyne",
+                     "DisplayName":  "Jolyne",
+                     "Aliases":  [
+                                     "Jolyne"
+                                 ],
+                     "HomeRegion":  "castle_village",
+                     "Tags":  [
+                                  "sve",
+                                  "expanded_npc",
+                                  "adventurer",
+                                  "castle_village"
+                              ]
+                 },
+                 {
+                     "Id":  "lance",
+                     "DisplayName":  "Lance",
+                     "Aliases":  [
+                                     "Lance"
+                                 ],
+                     "HomeRegion":  "castle_village",
+                     "Tags":  [
+                                  "sve",
+                                  "expanded_npc",
+                                  "adventurer",
+                                  "castle_village"
+                              ]
+                 },
+                 {
+                     "Id":  "magnus",
+                     "DisplayName":  "Magnus",
+                     "Aliases":  [
+                                     "Magnus",
+                                     "Wizard",
+                                     "Rasmodius"
+                                 ],
+                     "HomeRegion":  "wizard_tower",
+                     "Tags":  [
+                                  "sve",
+                                  "expanded_npc",
+                                  "wizard",
+                                  "magic"
+                              ]
+                 },
+                 {
+                     "Id":  "martin",
+                     "DisplayName":  "Martin",
+                     "Aliases":  [
+                                     "Martin"
+                                 ],
+                     "HomeRegion":  "pelican_town",
+                     "Tags":  [
+                                  "sve",
+                                  "expanded_npc",
+                                  "joja"
+                              ]
+                 },
+                 {
+                     "Id":  "morgan",
+                     "DisplayName":  "Morgan",
+                     "Aliases":  [
+                                     "Morgan"
+                                 ],
+                     "HomeRegion":  "wizard_tower",
+                     "Tags":  [
+                                  "sve",
+                                  "expanded_npc",
+                                  "magic"
+                              ]
+                 },
+                 {
+                     "Id":  "olivia",
+                     "DisplayName":  "Olivia",
+                     "Aliases":  [
+                                     "Olivia"
+                                 ],
+                     "HomeRegion":  "pelican_town",
+                     "Tags":  [
+                                  "sve",
+                                  "expanded_npc",
+                                  "zuzu"
+                              ]
+                 },
+                 {
+                     "Id":  "peaches",
+                     "DisplayName":  "Peaches",
+                     "Aliases":  [
+                                     "Peaches"
+                                 ],
+                     "HomeRegion":  "aurora_vineyard",
+                     "Tags":  [
+                                  "sve",
+                                  "expanded_npc",
+                                  "junimo",
+                                  "aurora_vineyard"
+                              ]
+                 },
+                 {
+                     "Id":  "scarlett",
+                     "DisplayName":  "Scarlett",
+                     "Aliases":  [
+                                     "Scarlett"
+                                 ],
+                     "HomeRegion":  "grampleton_suburbs",
+                     "Tags":  [
+                                  "sve",
+                                  "expanded_npc",
+                                  "grampleton",
+                                  "social"
+                              ]
+                 },
+                 {
+                     "Id":  "sophia",
+                     "DisplayName":  "Sophia",
+                     "Aliases":  [
+                                     "Sophia"
+                                 ],
+                     "HomeRegion":  "blue_moon_vineyard",
+                     "Tags":  [
+                                  "sve",
+                                  "expanded_npc",
+                                  "vineyard"
+                              ]
+                 },
+                 {
+                     "Id":  "suki",
+                     "DisplayName":  "Suki",
+                     "Aliases":  [
+                                     "Suki"
+                                 ],
+                     "HomeRegion":  "cindersap_forest",
+                     "Tags":  [
+                                  "sve",
+                                  "expanded_npc",
+                                  "merchant"
+                              ]
+                 },
+                 {
+                     "Id":  "susan",
+                     "DisplayName":  "Susan",
+                     "Aliases":  [
+                                     "Susan"
+                                 ],
+                     "HomeRegion":  "emerald_farm",
+                     "Tags":  [
+                                  "sve",
+                                  "expanded_npc",
+                                  "farmer",
+                                  "emerald_farm"
+                              ]
+                 },
+                 {
+                     "Id":  "treyvon",
+                     "DisplayName":  "Treyvon",
+                     "Aliases":  [
+                                     "Treyvon"
+                                 ],
+                     "HomeRegion":  "grampleton_suburbs",
+                     "Tags":  [
+                                  "sve",
+                                  "expanded_npc",
+                                  "grampleton",
+                                  "merchant"
+                              ]
+                 },
+                 {
+                     "Id":  "victor",
+                     "DisplayName":  "Victor",
+                     "Aliases":  [
+                                     "Victor"
+                                 ],
+                     "HomeRegion":  "pelican_town",
+                     "Tags":  [
+                                  "sve",
+                                  "expanded_npc",
+                                  "zuzu",
+                                  "student"
+                              ]
+                 }
+             ]
+}

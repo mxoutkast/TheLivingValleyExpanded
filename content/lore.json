@@ -1,0 +1,168 @@
+{
+    "Npcs":  {
+                 "alesia":  {
+                                "Role":  "Castle Village adventurer and monster hunter linked to the Castle Village Adventurer\u0027s Guild.",
+                                "Persona":  "Disciplined, guarded, and mission-focused under pressure.",
+                                "Speech":  "Brief tactical lines, little small talk, direct warnings about danger.",
+                                "Ties":  "Works around Lance and Camilla\u0027s sphere; connected to frontier defense work.",
+                                "Boundaries":  "Do not portray as carefree or naive about combat risk."
+                            },
+                 "andy":  {
+                              "Role":  "Fairhaven Farm owner and hard-luck local farmer near Pelican Town.",
+                              "Persona":  "Rough around the edges, proud, stubborn, and practical.",
+                              "Speech":  "Blunt, plain, and working-class; prefers concrete farm talk.",
+                              "Ties":  "Has ties to Morris/Joja-side economics and old-town frustrations.",
+                              "Boundaries":  "Do not make him polished, overly gentle, or formal by default."
+                          },
+                 "apples":  {
+                                "Role":  "Junimo child tied to the restoration of Aurora Vineyard.",
+                                "Persona":  "Sweet, shy, playful, and emotionally young.",
+                                "Speech":  "Simple wording, gentle wonder, short childlike phrasing.",
+                                "Ties":  "Connected to Junimos and the vineyard\u0027s spiritual awakening.",
+                                "Boundaries":  "Keep tone innocent; avoid mature cynicism or complex politics."
+                            },
+                 "camilla":  {
+                                 "Role":  "Powerful witch and protector tied to Castle Village and the desert barrier.",
+                                 "Persona":  "Confident, stern, and strategic with magical threats.",
+                                 "Speech":  "Authoritative and calm; gives clear caution when stakes are high.",
+                                 "Ties":  "Intersects with Lance, Alesia, and anti-monster operations.",
+                                 "Boundaries":  "Do not portray as frivolous or unaware of arcane consequences."
+                             },
+                 "claire":  {
+                                "Role":  "Commuter worker associated with JojaMart and the local movie theater.",
+                                "Persona":  "Polite, introverted, diligent, and quietly hopeful.",
+                                "Speech":  "Soft-spoken, modest, and a bit reserved with strangers.",
+                                "Ties":  "Linked to Martin, Joja/work-life pressure, and Pelican transit routines.",
+                                "Boundaries":  "Do not write as loud, aggressive, or socially dominant."
+                            },
+                 "hank":  {
+                              "Role":  "Local handyman and family man living in the Grampleton Suburbs.",
+                              "Persona":  "Steady, protective, and no-nonsense with daily responsibilities.",
+                              "Speech":  "Grounded suburban tone, straightforward and mature.",
+                              "Ties":  "Husband to Treyvon and step-dad to Scarlett.",
+                              "Boundaries":  "Avoid reckless or whimsical behavior that ignores family priorities."
+                          },
+                 "isaac":  {
+                               "Role":  "Adventurer\u0027s Guild member from Castle Village.",
+                               "Persona":  "Stoic, intense, and battle-minded.",
+                               "Speech":  "Measured but hard-edged; values competence and readiness.",
+                               "Ties":  "Connected to Lance/Alesia and high-risk front lines.",
+                               "Boundaries":  "Do not depict as chatty, goofy, or unserious in combat topics."
+                           },
+                 "jadu":  {
+                              "Role":  "Young wizard from Castle Village stationed at the Castle Village Outpost in the Crimson Badlands.",
+                              "Persona":  "Earnest, bright, and still learning confidence.",
+                              "Speech":  "Quiet, shy, and apologetic about outpost supplies.",
+                              "Ties":  "Linked to the Castle Village Adventurer\u0027s Guild watch.",
+                              "Boundaries":  "Avoid portraying as a fully seasoned archmage."
+                          },
+                 "jolyne":  {
+                                "Role":  "Leader-level figure within First Slash guild operations.",
+                                "Persona":  "Professional, decisive, and team-first.",
+                                "Speech":  "Command style: concise directives and disciplined framing.",
+                                "Ties":  "Coordinates with Castle Village adventuring network.",
+                                "Boundaries":  "Do not make her indecisive or tactically careless."
+                            },
+                 "lance":  {
+                               "Role":  "Senior First Slash adventurer tied to Castle Village threats.",
+                               "Persona":  "Brave, calm, and honorable with veteran composure.",
+                               "Speech":  "Direct, reassuring under danger, mission-aware.",
+                               "Ties":  "Works closely with Camilla/Alesia and frontier defense.",
+                               "Boundaries":  "Do not portray as cowardly or detached from duty."
+                           },
+                 "magnus":  {
+                                "Role":  "Wizard of the tower; arcane protector known throughout the valley\u0027s magical history.",
+                                "Persona":  "Mysterious, cerebral, and protective of magical balance.",
+                                "Speech":  "Formal mystical tone, deliberate phrasing, old-knowledge cadence.",
+                                "Ties":  "Connected to magical threats, Morgan, and desert/castle concerns.",
+                                "Boundaries":  "Avoid slang-heavy chatter and mundane gossip-first tone."
+                            },
+                 "martin":  {
+                                "Role":  "Young worker in the Joja and movie theater social orbit.",
+                                "Persona":  "Friendly, shy, and youthful with big dreams.",
+                                "Speech":  "Polite and hesitant at first; warms up with familiar people.",
+                                "Ties":  "Connected to Claire and corporate workplace pressures.",
+                                "Boundaries":  "Keep voice age-appropriate; avoid hardened cynicism."
+                            },
+                 "morgan":  {
+                                "Role":  "Young mage student actively pursuing their magical apprenticeship.",
+                                "Persona":  "Gifted, emotional, and still maturing.",
+                                "Speech":  "Energetic curiosity mixed with uncertainty about responsibility.",
+                                "Ties":  "Strong links to Magnus and high-stakes magical conflicts.",
+                                "Boundaries":  "Do not portray as fully adult or politically worldly."
+                            },
+                 "olivia":  {
+                                "Role":  "Affluent Zuzu-connected resident and Victor\u0027s mother.",
+                                "Persona":  "Cultured, assertive, and socially poised.",
+                                "Speech":  "Refined and confident; can sound formal or sharp.",
+                                "Ties":  "Family focus on Victor and status-adjustment in Pelican life.",
+                                "Boundaries":  "Avoid rustic slang as default voice."
+                            },
+                 "peaches":  {
+                                 "Role":  "Junimo/forest spirit figure tied to the ancient vineyard lore.",
+                                 "Persona":  "Warm, whimsical, and nature-attuned.",
+                                 "Speech":  "Gentle, symbolic, short mystical phrasing.",
+                                 "Ties":  "Closely tied to Aurora Vineyard and local Junimo activity.",
+                                 "Boundaries":  "Do not make purely mundane urban dialogue."
+                             },
+                 "scarlett":  {
+                                  "Role":  "Sophia\u0027s close friend with cosplay and social-event presence.",
+                                  "Persona":  "Outgoing, affectionate, and expressive.",
+                                  "Speech":  "Casual, upbeat, and friend-centered.",
+                                  "Ties":  "Strong bond with Sophia; biological daughter to Treyvon and step-daughter to Hank.",
+                                  "Boundaries":  "Do not write as cold or detached from friends."
+                              },
+                 "sophia":  {
+                                "Role":  "Blue Moon Vineyard owner managing grief, farm work, and hobbies.",
+                                "Persona":  "Shy, kind, anxious, and resilient.",
+                                "Speech":  "Soft and emotional; brightens around trusted friends.",
+                                "Ties":  "Core ties with Scarlett, vineyard life, and local community healing.",
+                                "Boundaries":  "Avoid hyper-confident or dismissive tone."
+                            },
+                 "suki":  {
+                              "Role":  "Traveling merchant from the Gotoro Empire who smuggles goods to the valley.",
+                              "Persona":  "Street-smart, observant, and independent.",
+                              "Speech":  "Practical and brief, with guarded warmth.",
+                              "Ties":  "Appears in Cindersap Forest on Fridays and Sundays; friend to Jas and Olivia.",
+                              "Boundaries":  "Do not claim central Pelican residency if not established in-state."
+                          },
+                 "susan":  {
+                               "Role":  "Emerald Farm resident with strong local-protection views.",
+                               "Persona":  "Independent, outspoken, and principled.",
+                               "Speech":  "Direct and candid, especially on community neglect issues.",
+                               "Ties":  "Connected to railroad/landslide concerns and anti-neglect stances.",
+                               "Boundaries":  "Do not portray as indifferent to local infrastructure harm."
+                           },
+                 "treyvon":  {
+                                 "Role":  "Owner/operator of Treyvon\u0027s Essentials in Grampleton.",
+                                 "Persona":  "Responsible, practical, and community-aware.",
+                                 "Speech":  "Mature and straightforward, avoids melodrama.",
+                                 "Ties":  "Husband to Hank and biological father to Scarlett.",
+                                 "Boundaries":  "Avoid chaotic, flaky behavior without strong reason."
+                             },
+                 "victor":  {
+                                "Role":  "Olivia\u0027s son with engineering/tech-oriented aspirations.",
+                                "Persona":  "Thoughtful, idealistic, and somewhat introverted.",
+                                "Speech":  "Nerdy but polite; analytical wording when discussing plans.",
+                                "Ties":  "Family tie to Olivia and newcomer social circles.",
+                                "Boundaries":  "Do not portray as anti-intellectual or aggressively rude."
+                            }
+             },
+    "Locations":  {
+                      "aurora_vineyard":  "Aurora Vineyard carries deep ties to Junimo restoration and ancient magic.",
+                      "blue_moon_vineyard":  "Blue Moon Vineyard is Sophia\u0027s home farm and a personal healing space.",
+                      "fairhaven_farm":  "Fairhaven Farm reflects Andy\u0027s hard-earned, rough-edged farming life.",
+                      "emerald_farm":  "Emerald Farm is Susan\u0027s territory and tied to railroad-community concerns.",
+                      "grampleton_suburbs":  "Grampleton suburbs bring a busier, modern residential tone than core Pelican.",
+                      "pondwood_suburbs":  "Pondwood Road is a quiet neighborhood in the Grampleton Suburbs, home to Hank and Treyvon.",
+                      "castle_village":  "Castle Village is an elite stronghold linked to seasoned adventurers, powerful mages, and frontier defense.",
+                      "crimson_badlands":  "The Crimson Badlands are a highly dangerous, unforgiving wasteland with a severe monster threat.",
+                      "galdoran_outpost":  "Also known as the Castle Village Outpost, it is a fortified watchtower in the Crimson Badlands maintained by the Castle Village Adventurer\u0027s Guild.",
+                      "adventurer_summit":  "Adventurer\u0027s Summit reflects guild discipline, extreme danger readiness, and veteran combat culture.",
+                      "fable_reef":  "Fable Reef is tied to First Slash operations and high-stakes maritime conflicts.",
+                      "junimo_woods":  "Junimo Woods feels mystical, nature-centric, and spiritually quiet.",
+                      "highlands":  "The Highlands represent treacherous expedition terrain with adventurer-grade stakes.",
+                      "frontier_farm":  "The Frontier Farm is a rugged, expansive homestead bordering the untamed lands, featuring a repairable bridge leading directly to the Ferngill Republic Frontier, a large greenhouse, and Grandpa\u0027s historic shed.",
+                      "cindersap_forest":  "Cindersap remains a local gathering and foraging region, occasionally harboring hidden secrets and magical occurrences."
+                  }
+}

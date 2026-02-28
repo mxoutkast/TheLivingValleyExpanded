@@ -1,24 +1,31 @@
 {
-  "Name": "The Living Valley Expanded Compatibility",
-  "Author": "mariachaaan",
-  "Version": "1.0.1",
-  "Description": "Compatibility patch for The Living Valley with Stardew Valley Expanded NPC support.",
-  "UniqueID": "ai2claw.TheLivingValleyExpanded",
-  "EntryDll": "TheLivingValleyExpanded.dll",
-  "MinimumApiVersion": "4.0.0",
-  "Dependencies": [
-    {
-      "UniqueID": "mx146323.StardewLivingRPG",
-      "IsRequired": true
-    },
-    {
-      "UniqueID": "FlashShifter.StardewValleyExpandedCP",
-      "IsRequired": false
-    },
-    {
-      "UniqueID": "FlashShifter.StardewValleyExpandedALL",
-      "IsRequired": false
-    }
-  ],
-  "UpdateKeys": [ "GitHub:mxoutkast/TheLivingValleyExpanded", "Nexus:42699" ]
+    "Name":  "The Living Valley Expanded Compatibility (TLV Content Pack)",
+    "Author":  "mariachaaan",
+    "Version":  "2.0.1",
+    "Description":  "Stardew Valley Expanded NPC roster, lore, canon deltas, and portrait emotion profiles for The Living Valley custom NPC framework.",
+    "UniqueID":  "mx.TheLivingValleyExpanded",
+    "MinimumApiVersion":  "4.0.0",
+    "UpdateKeys":  [
+                       "Nexus:42699"
+                   ],
+    "ContentPackFor":  {
+                           "UniqueID":  "mx146323.StardewLivingRPG",
+                           "MinimumVersion":  "0.4.0"
+                       },
+    "Dependencies":  [
+                         {
+                             "UniqueID":  "FlashShifter.StardewValleyExpandedCP",
+                             "IsRequired":  false
+                         },
+                         {
+                             "UniqueID":  "FlashShifter.StardewValleyExpandedALL",
+                             "IsRequired":  false
+                         },
+                         {
+                             "UniqueID":  "FlashShifter.StardewValleyExpandedCode",
+                             "IsRequired":  false
+                         }
+                     ],
+    "TLVPackVersion":  "1.0.0",
+    "TLVFrameworkMinVersion":  "0.4.0"
 }

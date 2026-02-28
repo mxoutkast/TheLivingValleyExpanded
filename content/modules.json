@@ -1,0 +1,130 @@
+{
+    "Npcs":  {
+                 "alesia":  {
+                                "EnableQuestProposals":  true,
+                                "EnableRumors":  true,
+                                "EnableArticles":  true,
+                                "EnableTownEvents":  true
+                            },
+                 "andy":  {
+                              "EnableQuestProposals":  true,
+                              "EnableRumors":  true,
+                              "EnableArticles":  true,
+                              "EnableTownEvents":  true
+                          },
+                 "apples":  {
+                                "EnableQuestProposals":  false,
+                                "EnableRumors":  false,
+                                "EnableArticles":  false,
+                                "EnableTownEvents":  true
+                            },
+                 "camilla":  {
+                                 "EnableQuestProposals":  true,
+                                 "EnableRumors":  true,
+                                 "EnableArticles":  true,
+                                 "EnableTownEvents":  true
+                             },
+                 "claire":  {
+                                "EnableQuestProposals":  true,
+                                "EnableRumors":  true,
+                                "EnableArticles":  true,
+                                "EnableTownEvents":  true
+                            },
+                 "hank":  {
+                              "EnableQuestProposals":  true,
+                              "EnableRumors":  true,
+                              "EnableArticles":  true,
+                              "EnableTownEvents":  true
+                          },
+                 "isaac":  {
+                               "EnableQuestProposals":  true,
+                               "EnableRumors":  true,
+                               "EnableArticles":  true,
+                               "EnableTownEvents":  true
+                           },
+                 "jadu":  {
+                              "EnableQuestProposals":  true,
+                              "EnableRumors":  true,
+                              "EnableArticles":  true,
+                              "EnableTownEvents":  true
+                          },
+                 "jolyne":  {
+                                "EnableQuestProposals":  true,
+                                "EnableRumors":  true,
+                                "EnableArticles":  true,
+                                "EnableTownEvents":  true
+                            },
+                 "lance":  {
+                               "EnableQuestProposals":  true,
+                               "EnableRumors":  true,
+                               "EnableArticles":  true,
+                               "EnableTownEvents":  true
+                           },
+                 "magnus":  {
+                                "EnableQuestProposals":  true,
+                                "EnableRumors":  true,
+                                "EnableArticles":  true,
+                                "EnableTownEvents":  true
+                            },
+                 "martin":  {
+                                "EnableQuestProposals":  true,
+                                "EnableRumors":  true,
+                                "EnableArticles":  true,
+                                "EnableTownEvents":  true
+                            },
+                 "morgan":  {
+                                "EnableQuestProposals":  true,
+                                "EnableRumors":  true,
+                                "EnableArticles":  true,
+                                "EnableTownEvents":  true
+                            },
+                 "olivia":  {
+                                "EnableQuestProposals":  true,
+                                "EnableRumors":  true,
+                                "EnableArticles":  true,
+                                "EnableTownEvents":  true
+                            },
+                 "peaches":  {
+                                 "EnableQuestProposals":  false,
+                                 "EnableRumors":  false,
+                                 "EnableArticles":  false,
+                                 "EnableTownEvents":  true
+                             },
+                 "scarlett":  {
+                                  "EnableQuestProposals":  true,
+                                  "EnableRumors":  true,
+                                  "EnableArticles":  true,
+                                  "EnableTownEvents":  true
+                              },
+                 "sophia":  {
+                                "EnableQuestProposals":  true,
+                                "EnableRumors":  true,
+                                "EnableArticles":  true,
+                                "EnableTownEvents":  true
+                            },
+                 "suki":  {
+                              "EnableQuestProposals":  true,
+                              "EnableRumors":  true,
+                              "EnableArticles":  true,
+                              "EnableTownEvents":  true
+                          },
+                 "susan":  {
+                               "EnableQuestProposals":  true,
+                               "EnableRumors":  true,
+                               "EnableArticles":  true,
+                               "EnableTownEvents":  true
+                           },
+                 "treyvon":  {
+                                 "EnableQuestProposals":  true,
+                                 "EnableRumors":  true,
+                                 "EnableArticles":  true,
+                                 "EnableTownEvents":  true
+                             },
+                 "victor":  {
+                                "EnableQuestProposals":  true,
+                                "EnableRumors":  true,
+                                "EnableArticles":  true,
+                                "EnableTownEvents":  true
+                            }
+             }
+}
