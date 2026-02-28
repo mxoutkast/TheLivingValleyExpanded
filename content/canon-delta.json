@@ -1,0 +1,22 @@
+{
+    "AdditionalLocationTokens":  [
+                                     "adventurer_summit",
+                                     "aurora_vineyard",
+                                     "blue_moon_vineyard",
+                                     "castle_village",
+                                     "cindersap_forest",
+                                     "crimson_badlands",
+                                     "emerald_farm",
+                                     "fable_reef",
+                                     "fairhaven_farm",
+                                     "frontier_farm",
+                                     "galdoran_outpost",
+                                     "grampleton_suburbs",
+                                     "highlands",
+                                     "junimo_woods",
+                                     "pondwood_suburbs"
+                                 ],
+    "AdditionalTimelineAnchors":  [
+
+                                  ]
+}

@@ -1,59 +1,35 @@
-# The Living Valley Expanded Compatibility Patch
+# TLV Custom NPC Pack - SVE Compatibility
 
-This is a SMAPI compatibility mod for:
+This is a **The Living Valley custom NPC content pack**.
+
+It adds Stardew Valley Expanded compatibility data to TLV:
+- custom NPC registry entries for SVE villagers;
+- module flags (quests, rumors, articles, town events);
+- lore injection data for NPCs and SVE locations;
+- canon delta location tokens;
+- portrait emotion profile mappings.
+
+## Requirements
+
+- SMAPI
 - The Living Valley (`mx146323.StardewLivingRPG`)
-- Stardew Valley Expanded (SVE)
-
-It extends The Living Valley's internal NPC targeting so SVE villagers are recognized by:
-- NPC roster expansion
-- social-visit quest target validation
-- town-event NPC inference
-- compact prompt canon NPC list
-- lore-aware Player2 prompt injection (`SVE_NPC_LORE` + `SVE_LOCATION_LORE`)
+- Stardew Valley Expanded (recommended for the SVE NPC set)
 
 ## Install
 
-1. Install/update **The Living Valley**:
-   - https://www.nexusmods.com/stardewvalley/mods/42597
-2. Install/update **Stardew Valley Expanded**:
-   - https://www.nexusmods.com/stardewvalley/mods/3753
-   - https://github.com/FlashShifter/StardewValleyExpanded
-3. Build this project and copy its output folder into your `Mods` directory.
+1. Place this folder in your Stardew Valley `Mods` directory.
+2. Ensure TLV is installed and enabled.
+3. Launch the game with SMAPI.
 
-## Build
+## Content Files
 
-Set `SMAPI_PATH` to your Stardew Valley install directory, then run:
+- `content/modules.json`
+- `content/npcs.json`
+- `content/lore.json`
+- `content/canon-delta.json`
+- `content/portrait-profiles.json`
 
-```powershell
-dotnet build
-```
+## Notes
 
-Example (PowerShell):
-
-```powershell
-$env:SMAPI_PATH = "C:\Program Files (x86)\Steam\steamapps\common\Stardew Valley"
-dotnet build
-```
-
-## Config
-
-`config.json`:
-
-- `EnableSveLoreInjection`:
-  when `true`, injects SVE lore snippets into Player2 `game_state_info`.
-- `LoreLocaleOverride`:
-  optional locale override (for example `es`, `pt-br`). Empty = use current game locale.
-- `IncludeFriendshipNpcsWhenSVEInstalled`:
-  when `true`, friendship NPC names from the loaded save are auto-added.
-- `AdditionalNpcNamesCsv`:
-  comma-separated extra NPC names to force-add.
-
-Lore data source:
-- `assets/sve-lore.json`
-- edit this file to tune personality, speech style, relationship ties, and location context.
-
-Community localization:
-- Drop locale overlays into `i18n/sve-lore.<locale>.json` (for example `i18n/sve-lore.es.json`).
-- Overlays are partial and merged over base lore.
-- Locale fallback is automatic (`pt-br` -> `pt` -> base).
-- Full contributor instructions: `i18n/README.md`.
+- This pack now relies on TLV's built-in custom NPC framework.
+- It does not include a `config.json` or `EntryDll`.

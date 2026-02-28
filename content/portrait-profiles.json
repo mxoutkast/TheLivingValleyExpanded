@@ -1,0 +1,338 @@
+{
+    "Npcs":  {
+                 "Alesia":  {
+                                "Aliases":  [
+                                                "Alesia"
+                                            ],
+                                "DefaultFrames":  {
+                                                      "Neutral":  0,
+                                                      "Happy":  1,
+                                                      "Content":  0,
+                                                      "Blush":  4,
+                                                      "Sad":  2,
+                                                      "Angry":  3,
+                                                      "Worried":  2,
+                                                      "Surprised":  5
+                                                  }
+                            },
+                 "Andy":  {
+                              "Aliases":  [
+                                              "Andy"
+                                          ],
+                              "DefaultFrames":  {
+                                                    "Neutral":  0,
+                                                    "Happy":  1,
+                                                    "Content":  0,
+                                                    "Blush":  8,
+                                                    "Sad":  2,
+                                                    "Angry":  4,
+                                                    "Worried":  2,
+                                                    "Surprised":  0
+                                                }
+                          },
+                 "Apples":  {
+                                "Aliases":  [
+                                                "Apples"
+                                            ],
+                                "DefaultFrames":  {
+                                                      "Neutral":  0,
+                                                      "Happy":  1,
+                                                      "Content":  0,
+                                                      "Blush":  1,
+                                                      "Sad":  3,
+                                                      "Angry":  2,
+                                                      "Worried":  3,
+                                                      "Surprised":  0
+                                                  }
+                            },
+                 "Camilla":  {
+                                 "Aliases":  [
+                                                 "Camilla"
+                                             ],
+                                 "DefaultFrames":  {
+                                                       "Neutral":  0,
+                                                       "Happy":  6,
+                                                       "Content":  1,
+                                                       "Blush":  4,
+                                                       "Sad":  5,
+                                                       "Angry":  3,
+                                                       "Worried":  2,
+                                                       "Surprised":  7
+                                                   }
+                             },
+                 "Claire":  {
+                                "Aliases":  [
+                                                "Claire"
+                                            ],
+                                "DefaultFrames":  {
+                                                      "Neutral":  0,
+                                                      "Happy":  5,
+                                                      "Content":  1,
+                                                      "Blush":  4,
+                                                      "Sad":  2,
+                                                      "Angry":  3,
+                                                      "Worried":  2,
+                                                      "Surprised":  6
+                                                  }
+                            },
+                 "Isaac":  {
+                               "Aliases":  [
+                                               "Isaac"
+                                           ],
+                               "DefaultFrames":  {
+                                                     "Neutral":  0,
+                                                     "Happy":  1,
+                                                     "Content":  0,
+                                                     "Blush":  4,
+                                                     "Sad":  2,
+                                                     "Angry":  7,
+                                                     "Worried":  9,
+                                                     "Surprised":  8
+                                                 }
+                           },
+                 "Jadu":  {
+                              "Aliases":  [
+                                              "Jadu"
+                                          ],
+                              "DefaultFrames":  {
+                                                    "Neutral":  0,
+                                                    "Happy":  1,
+                                                    "Content":  0,
+                                                    "Blush":  4,
+                                                    "Sad":  2,
+                                                    "Angry":  3,
+                                                    "Worried":  2,
+                                                    "Surprised":  6
+                                                }
+                          },
+                 "Jolyne":  {
+                                "Aliases":  [
+                                                "Jolyne"
+                                            ],
+                                "DefaultFrames":  {
+                                                      "Neutral":  0,
+                                                      "Happy":  1,
+                                                      "Content":  0,
+                                                      "Blush":  1,
+                                                      "Sad":  2,
+                                                      "Angry":  3,
+                                                      "Worried":  2,
+                                                      "Surprised":  5
+                                                  }
+                            },
+                 "Lance":  {
+                               "Aliases":  [
+                                               "Lance"
+                                           ],
+                               "DefaultFrames":  {
+                                                     "Neutral":  0,
+                                                     "Happy":  1,
+                                                     "Content":  5,
+                                                     "Blush":  4,
+                                                     "Sad":  2,
+                                                     "Angry":  3,
+                                                     "Worried":  2,
+                                                     "Surprised":  3
+                                                 }
+                           },
+                 "Magnus":  {
+                                "Aliases":  [
+                                                "Magnus"
+                                            ],
+                                "DefaultFrames":  {
+                                                      "Neutral":  0,
+                                                      "Happy":  1,
+                                                      "Content":  0,
+                                                      "Blush":  4,
+                                                      "Sad":  2,
+                                                      "Angry":  5,
+                                                      "Worried":  2,
+                                                      "Surprised":  3
+                                                  }
+                            },
+                 "Martin":  {
+                                "Aliases":  [
+                                                "Martin"
+                                            ],
+                                "DefaultFrames":  {
+                                                      "Neutral":  0,
+                                                      "Happy":  1,
+                                                      "Content":  0,
+                                                      "Blush":  5,
+                                                      "Sad":  2,
+                                                      "Angry":  5,
+                                                      "Worried":  2,
+                                                      "Surprised":  4
+                                                  }
+                            },
+                 "Morgan":  {
+                                "Aliases":  [
+                                                "Morgan"
+                                            ],
+                                "DefaultFrames":  {
+                                                      "Neutral":  0,
+                                                      "Happy":  1,
+                                                      "Content":  7,
+                                                      "Blush":  3,
+                                                      "Sad":  2,
+                                                      "Angry":  4,
+                                                      "Worried":  2,
+                                                      "Surprised":  5
+                                                  }
+                            },
+                 "Olivia":  {
+                                "Aliases":  [
+                                                "Olivia"
+                                            ],
+                                "DefaultFrames":  {
+                                                      "Neutral":  0,
+                                                      "Happy":  1,
+                                                      "Content":  3,
+                                                      "Blush":  4,
+                                                      "Sad":  2,
+                                                      "Angry":  5,
+                                                      "Worried":  2,
+                                                      "Surprised":  7
+                                                  }
+                            },
+                 "Peaches":  {
+                                 "Aliases":  [
+                                                 "Peaches"
+                                             ],
+                                 "DefaultFrames":  {
+                                                       "Neutral":  0,
+                                                       "Happy":  0,
+                                                       "Content":  0,
+                                                       "Blush":  0,
+                                                       "Sad":  0,
+                                                       "Angry":  0,
+                                                       "Worried":  0,
+                                                       "Surprised":  0
+                                                   }
+                             },
+                 "Scarlett":  {
+                                  "Aliases":  [
+                                                  "Scarlett"
+                                              ],
+                                  "DefaultFrames":  {
+                                                        "Neutral":  0,
+                                                        "Happy":  1,
+                                                        "Content":  0,
+                                                        "Blush":  4,
+                                                        "Sad":  2,
+                                                        "Angry":  3,
+                                                        "Worried":  2,
+                                                        "Surprised":  6
+                                                    },
+                                  "Variants":  [
+                                                   {
+                                                       "Id":  "scarlett_scarlett_cosplay",
+                                                       "Priority":  30,
+                                                       "AppearanceIdContains":  [
+                                                                                    "scarlett_cosplay"
+                                                                                ],
+                                                       "Frames":  {
+                                                                      "Neutral":  0,
+                                                                      "Happy":  1,
+                                                                      "Content":  0,
+                                                                      "Blush":  1,
+                                                                      "Sad":  2,
+                                                                      "Angry":  3,
+                                                                      "Worried":  2,
+                                                                      "Surprised":  1
+                                                                  }
+                                                   }
+                                               ]
+                              },
+                 "Sophia":  {
+                                "Aliases":  [
+                                                "Sophia"
+                                            ],
+                                "DefaultFrames":  {
+                                                      "Neutral":  0,
+                                                      "Happy":  1,
+                                                      "Content":  1,
+                                                      "Blush":  4,
+                                                      "Sad":  2,
+                                                      "Angry":  3,
+                                                      "Worried":  2,
+                                                      "Surprised":  5
+                                                  }
+                            },
+                 "Suki":  {
+                              "Aliases":  [
+                                              "Suki"
+                                          ],
+                              "DefaultFrames":  {
+                                                    "Neutral":  0,
+                                                    "Happy":  0,
+                                                    "Content":  0,
+                                                    "Blush":  0,
+                                                    "Sad":  0,
+                                                    "Angry":  0,
+                                                    "Worried":  0,
+                                                    "Surprised":  0
+                                                }
+                          },
+                 "Susan":  {
+                               "Aliases":  [
+                                               "Susan"
+                                           ],
+                               "DefaultFrames":  {
+                                                     "Neutral":  0,
+                                                     "Happy":  1,
+                                                     "Content":  0,
+                                                     "Blush":  1,
+                                                     "Sad":  2,
+                                                     "Angry":  3,
+                                                     "Worried":  2,
+                                                     "Surprised":  4
+                                                 }
+                           },
+                 "Victor":  {
+                                "Aliases":  [
+                                                "Victor"
+                                            ],
+                                "DefaultFrames":  {
+                                                      "Neutral":  0,
+                                                      "Happy":  1,
+                                                      "Content":  3,
+                                                      "Blush":  4,
+                                                      "Sad":  2,
+                                                      "Angry":  5,
+                                                      "Worried":  2,
+                                                      "Surprised":  7
+                                                  }
+                            },
+                 "Hank":  {
+                              "Aliases":  [
+                                              "Hank"
+                                          ],
+                              "DefaultFrames":  {
+                                                    "Neutral":  0,
+                                                    "Happy":  0,
+                                                    "Content":  0,
+                                                    "Blush":  0,
+                                                    "Sad":  0,
+                                                    "Angry":  0,
+                                                    "Worried":  0,
+                                                    "Surprised":  0
+                                                }
+                          },
+                 "Treyvon":  {
+                                 "Aliases":  [
+                                                 "Treyvon"
+                                             ],
+                                 "DefaultFrames":  {
+                                                       "Neutral":  0,
+                                                       "Happy":  0,
+                                                       "Content":  0,
+                                                       "Blush":  0,
+                                                       "Sad":  0,
+                                                       "Angry":  0,
+                                                       "Worried":  0,
+                                                       "Surprised":  0
+                                                   }
+                             }
+             }
+}
